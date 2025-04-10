@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapcsolatfelvétel</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Kapcsolatfelvétel</h1>
+    <p>Ha kérdése van, kérjük töltse ki az alábbi űrlapot, és mi hamarosan válaszolunk!</p>
+
+    <form action="submit_form.php" method="POST">
+        <label for="name">Név:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Üzenet:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Küldés">
+    </form>
+</body>
+</html>

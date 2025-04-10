@@ -1,0 +1,226 @@
+/* INDEX.HTML */
+:root {
+    --pastel-pink: #f8c8dc;
+    --pastel-green: #bce3cb;
+    --pastel-blue: #cbe4f9;
+    --text-color: #333;
+    --background: #fffafc;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--background);
+    color: var(--text-color);
+  }
+  
+  header {
+    background-color: var(--pastel-pink);
+    padding: 1rem;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  
+  /* Hamburger gomb */
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+  }
+  
+  /* Hero szekció */
+  .hero {
+    padding: 2rem;
+    background-color: var(--pastel-blue);
+    text-align: center;
+  }
+  
+  /* Reszponzív: mobil */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: var(--pastel-green);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  }
+
+
+  /*CONTACT.HTML*/
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #007BFF;
+    text-align: center;
+    margin-top: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;  /* Ensures padding doesn't affect width */
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Mobil reszponzivitás */
+@media (max-width: 600px) {
+    body{
+        max-width: 90%;
+        margin: auto;
+    }
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    input[type="submit"] {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+/*PRODUCTS.HTML*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+    margin: 30px 0;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: #28a745;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    .product-name {
+        font-size: 1rem;
+    }
+
+    .product-price {
+        font-size: 0.95rem;
+    }
+}
