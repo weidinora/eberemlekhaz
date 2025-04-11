@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kedvencek</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Webshop</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Kezdőlap</a></li>
+        <li><a href="products.html">Termékek</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Kedvencek</h1>
+    <ul id="favorites-items" class="item-list"></ul>
+  </main>
+  <script>
+    const items = JSON.parse(localStorage.getItem("favorites") || "[]");
+    const list = document.getElementById("favorites-items");
+    if (items.length === 0) {
+      list.innerHTML = "<li>Nincs kedvenc termék.</li>";
+    } else {
+      items.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        list.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
